@@ -32,7 +32,7 @@ section {
   }
 
   .fourth-para a.location-name {
-      font-size: 2rem;
+      font-size: 1.5rem;
   }
 
   a.directions {
@@ -67,11 +67,11 @@ section {
   }
 
   .fourth-para a.location-name {
-      font-size: 3rem;
+      font-size: 2rem;
   }
 
   a.directions {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .dates-info .time {
@@ -135,7 +135,7 @@ p {
 div.second-para, .third-para {
   font-size: 2rem;
   text-shadow: 2px 2px 0px black;
-  font-family: fantasy;
+  font-family: cursive;
   max-width: 400px;
   float: right;
   color: #f5e6b8;
@@ -143,20 +143,19 @@ div.second-para, .third-para {
 }
 
 .third-para {
-  text-shadow: 2px 2px 0px #0890e2;
   color: white;
   padding: 15px;
   margin: 15px;
 }
 
-.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-}
-
 @keyframes beat {
   to {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
     transform: scale(1.6);
+    text-shadow: 1px 1px black;
   }
 }
 
@@ -200,7 +199,7 @@ div.second-para, .third-para {
 .third-para-div .dates-info {
   color: white;
   border: 3px solid white;
-  text-shadow: 2px 1px #0890e2;
+  text-shadow: 2px 1px black;
 }
 
 .third-para-div .dates-info .location {
@@ -246,8 +245,9 @@ div.second-para, .third-para {
 
 .fourth-para a.location-name {
     color: white;
-    text-shadow: 2px 3px 1px #0a458e;
+    text-shadow: 1px 1px 1px #0a458e;
     cursor: pointer;
+    font-family: cursive;
 }
 
 a.directions {
@@ -260,4 +260,61 @@ a.directions {
 .ceremony sup {
   color: gold;
   text-shadow: 1px 1px 1px black;
+}
+
+.time {
+    //animation: scale-anim  .5s infinite alternate;
+    //transform-origin: center;
+}
+
+@keyframes scale-anim {
+  to {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
+
+.dates-info {
+  animation: change-border-1 2500ms linear infinite;
+}
+
+@-webkit-keyframes change-border-1 {
+
+    50% {border-radius: 50px;border-color: #a56b40;background: wheat;}
+    90% {border-radius: 0;background: none;}
+}
+
+@keyframes change-border-1 {
+
+  50% {border-radius: 50px;border-color: #a56b40;background: wheat;}
+  90% {border-radius: 0;background: none;}
+}
+
+@-moz-keyframes change-border-1 {
+  50% {border-radius: 50px;border-color: #a56b40;background: wheat;}
+  90% {border-radius: 0;background: none;}
+}
+
+.third-para-div .dates-info {
+  animation: change-border-2 2500ms linear infinite;
+}
+
+@-webkit-keyframes change-border-2 {
+
+    50% {border-radius: 50px;border-color: #a56b40;background: #2f2b2a;}
+    90% {border-radius: 0;background: none;}
+}
+
+@keyframes change-border-2 {
+
+  50% {border-radius: 50px;border-color: #a56b40;background: #2f2b2a;}
+  90% {border-radius: 0;background: none;}
+}
+
+@-moz-keyframes change-border-2 {
+  50% {border-radius: 50px;border-color: #a56b40;background: #2f2b2a;}
+  90% {border-radius: 0;background: none;}
 }
