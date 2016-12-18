@@ -7,6 +7,7 @@
 
   <body>
     <section>
+
       <div class="intro-content">
         <div class="title text-center">The Wedding Ceremony of</div>
         <div class="brand text-center">
@@ -18,7 +19,28 @@
         </div><!-- brand -->
         <div class="location text-center">Bangalore</div>
         <div class="date text-center">03 . 02 . 2017</div>
+
+        <div id="clockDiv" style="margin-top: 3rem;">
+          <div>
+            <span class="clock-days"></span>
+            <div class="smalltext">Days</div>
+          </div>
+          <div>
+            <span class="clock-hours"></span>
+            <div class="smalltext">Hours</div>
+          </div>
+          <div>
+            <span class="clock-minutes"></span>
+            <div class="smalltext">Minutes</div>
+          </div>
+          <div>
+            <span class="clock-seconds"></span>
+            <div class="smalltext">Seconds</div>
+          </div>
+        </div>
+
       </div>
+
     </section>
     <section>
       <div>
@@ -55,6 +77,53 @@
         <a class="directions" href="https://goo.gl/maps/cCzZAzd1VB72" target="_blank">Directions &#10166;</a>
       </p>
     </section>
+
+    <script type = 'text/javascript'>
+
+    function getTimeRemaining(endtime) {
+      var total = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((total / 1000) % 60);
+      var minutes = Math.floor((total / 1000 / 60) % 60);
+      var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(total / (1000 * 60 * 60 * 24));
+      return {
+        'total': total,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+    }
+
+    function startClock(id, endtime) {
+      var clockDiv = document.getElementById(id);
+      var daysSpan = clockDiv.querySelector('.clock-days');
+      var hoursSpan = clockDiv.querySelector('.clock-hours');
+      var minutesSpan = clockDiv.querySelector('.clock-minutes');
+      var secondsSpan = clockDiv.querySelector('.clock-seconds');
+
+      function updateClock() {
+        var time = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = time.days;
+        hoursSpan.innerHTML = ('0' + time.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + time.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + time.seconds).slice(-2);
+
+        if (time.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
+
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date("February 03, 2017 00:00:00");
+    //var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+    startClock('clockDiv', deadline);
+
+    </script>
   </body>
 
 </html>

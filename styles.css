@@ -116,7 +116,7 @@ p {
   padding-left: 15px;
     position: relative;
     z-index: 99;
-    margin-top: 130px;
+    margin-top: 100px;
     margin-bottom: 130px;
     color: black;
 }
@@ -316,4 +316,36 @@ a.directions {
 @-moz-keyframes change-border-2 {
   50% {border-radius: 50px;border-color: #a56b40;background: #2f2b2a;}
   90% {border-radius: 0;background: none;}
+}
+
+#clockDiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockDiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #9fb582;
+	display: inline-block;
+  border-radius: 15px;
+  border: 1px solid rgb(178, 39, 1);
+}
+
+#clockDiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: rgba(147, 218, 82, 0.68);
+  border-radius: 50px;
+	display: inline-block;
+  border: 1px solid white;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
 }
