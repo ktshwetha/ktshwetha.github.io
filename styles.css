@@ -355,3 +355,12 @@ a.directions {
 	padding-top: 5px;
 	font-size: 16px;
 }
+
+.table-elem {
+  display: table;
+}
+
+.table-cell-elem {
+  display: table-cell;
+  vertical-align: middle;
+}
