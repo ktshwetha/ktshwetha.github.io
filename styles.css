@@ -145,7 +145,7 @@ div.second-para, .third-para {
   max-width: 400px;
   float: right;
   color: #f5e6b8;
-  margin-right: 20px;
+  margin: 15px;
 }
 
 .third-para {
