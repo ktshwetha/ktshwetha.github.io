@@ -356,11 +356,7 @@ a.directions {
 	font-size: 16px;
 }
 
-.table-elem {
-  display: table;
-}
-
-.table-cell-elem {
-  display: table-cell;
-  vertical-align: middle;
+.flex-middle-elem {
+  display: flex;
+  align-items: center;
 }
