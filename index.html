@@ -66,7 +66,7 @@
     </section>
     <section>
       <p class="fourth-para" style="width: 450px;">
-        <span style="color:#d06808; text-shadow: 1px 1px black;">Sentence hearing at </span><br><br>
+        <span style="color:#ff7a00">Sentence hearing at </span><br><br>
         <a class="location-name" href="http://www.tamarindtree.co/" target="_blank">TAMARIND TREE</a><br><br>
         #88,<br>
         Avalahally,<br>
@@ -86,6 +86,9 @@
       var minutes = Math.floor((total / 1000 / 60) % 60);
       var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
       var days = Math.floor(total / (1000 * 60 * 60 * 24));
+      if (days.toString().length == 1) {
+          days = "0" + days;
+      }
       return {
         'total': total,
         'days': days,
@@ -105,10 +108,18 @@
       function updateClock() {
         var time = getTimeRemaining(endtime);
 
-        daysSpan.innerHTML = time.days;
-        hoursSpan.innerHTML = ('0' + time.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + time.minutes).slice(-2);
-        secondsSpan.innerHTML = ('0' + time.seconds).slice(-2);
+        if(time.total > 0) {
+          daysSpan.innerHTML = time.days;
+          hoursSpan.innerHTML = ('0' + time.hours).slice(-2);
+          minutesSpan.innerHTML = ('0' + time.minutes).slice(-2);
+          secondsSpan.innerHTML = ('0' + time.seconds).slice(-2);
+        } else {
+          daysSpan.innerHTML = '<span style="color: gold; width: 34px;">&#9787;<span>';
+          hoursSpan.innerHTML = '<span style="color: gold; width: 34px;">&#9787;<span>';
+          minutesSpan.innerHTML = '<span style="color: gold; width: 34px;">&#9787;<span>';
+          secondsSpan.innerHTML = '<span style="color: gold; width: 34px;">&#9787;<span>';
+        }
+
 
         if (time.total <= 0) {
           clearInterval(timeinterval);

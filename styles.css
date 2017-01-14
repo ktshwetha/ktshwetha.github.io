@@ -95,7 +95,13 @@ section:nth-of-type(3) {
 }
 
 section:nth-of-type(4) {
-  background-image: url('images/img4.jpg');
+  /*background-image: url('images/img4.jpg');*/
+  background: -webkit-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -moz-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -ms-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -o-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background-size: cover;
   justify-content: flex-end;
 }
 
@@ -238,8 +244,7 @@ div.second-para, .third-para {
 }
 
 .fourth-para {
-  color: #ffff5d;
-  text-shadow: 2px 3px 1px #333;
+  color: gold;
 }
 
 .fourth-para a.location-name {
@@ -343,6 +348,7 @@ a.directions {
   border-radius: 50px;
 	display: inline-block;
   border: 1px solid white;
+  min-width: 36px;
 }
 
 .smalltext{
