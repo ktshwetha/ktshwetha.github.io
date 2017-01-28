@@ -1,2 +1,2 @@
 # weddingInvite
-Wedding Invite(Personal)
+[Wedding Invite](https://deepakdinakara.github.io/weddingInvite/)(Personal)
