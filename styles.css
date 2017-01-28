@@ -85,7 +85,7 @@ section {
 
 
 section:nth-of-type(2) {
-  background-image: url('images/img2.jpg');
+  background-image: url('images/img5.jpg');
   justify-content: center;
 }
 
@@ -96,11 +96,11 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
   /*background-image: url('images/img4.jpg');*/
-  background: -webkit-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
-  background: -moz-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
-  background: -ms-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
-  background: -o-repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
-  background: repeating-linear-gradient(90deg, transparent, transparent 60px, rgb(27, 27, 27) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -webkit-repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(27, 27, 27, 0.9) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -moz-repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(27, 27, 27, 0.9) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -ms-repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(27, 27, 27, 0.9) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: -o-repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(27, 27, 27, 0.9) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
+  background: repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(27, 27, 27, 0.9) 25px, rgb(82, 82, 82) 68px), url(images/img4.jpg);
   background-size: cover;
   justify-content: flex-end;
 }
@@ -198,7 +198,7 @@ div.second-para, .third-para {
     margin: 15px;
     float: left;
     margin-right: 20px;
-    color: #65303c;
+    /*color: #65303c;*/
 }
 
 .third-para-div .dates-info {
@@ -282,23 +282,24 @@ a.directions {
 }
 
 .dates-info {
-  animation: change-border-1 2500ms linear infinite;
+  /*animation: change-border-1 2500ms linear infinite;*/
+  color: wheat;
 }
 
 @-webkit-keyframes change-border-1 {
 
-    50% {border-radius: 50px;border-color: #a56b40;background: wheat;}
+    50% {border-radius: 50px;border-color: #a56b40;background: #30580d;}
     90% {border-radius: 0;background: none;}
 }
 
 @keyframes change-border-1 {
 
-  50% {border-radius: 50px;border-color: #a56b40;background: wheat;}
+  50% {border-radius: 50px;border-color: #a56b40;background: #30580d;}
   90% {border-radius: 0;background: none;}
 }
 
 @-moz-keyframes change-border-1 {
-  50% {border-radius: 50px;border-color: #a56b40;background: wheat;}
+  50% {border-radius: 50px;border-color: #a56b40;background: #30580d;}
   90% {border-radius: 0;background: none;}
 }
 
