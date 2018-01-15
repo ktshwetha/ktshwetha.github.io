@@ -207,9 +207,9 @@ div.second-para, .third-para {
   text-shadow: 2px 1px black;
 }
 
-.third-para-div .dates-info .location {
+/*.third-para-div .dates-info .location {
    border-bottom: 1px dashed white;
-}
+}*/
 
 /*.third-para-div .dates-info .day-month {
     border-bottom: 1px dashed white;
@@ -304,6 +304,10 @@ a.directions {
 }
 
 .third-para-div .dates-info {
+  animation: change-border-2 2500ms linear infinite;
+}
+
+.second-para-div .dates-info {
   animation: change-border-2 2500ms linear infinite;
 }
 
