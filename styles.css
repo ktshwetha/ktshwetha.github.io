@@ -211,9 +211,9 @@ div.second-para, .third-para {
    border-bottom: 1px dashed white;
 }
 
-.third-para-div .dates-info .day-month {
+/*.third-para-div .dates-info .day-month {
     border-bottom: 1px dashed white;
-}
+}*/
 
 .dates-info .ceremony {
     text-transform: uppercase;
