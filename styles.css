@@ -149,6 +149,10 @@ div.second-para, .third-para {
 }
 
 .third-para {
+  color: black;
+}
+
+.third-para {
   color: white;
   margin: 15px;
 }
@@ -199,6 +203,12 @@ div.second-para, .third-para {
     float: left;
     margin-right: 20px;
     /*color: #65303c;*/
+}
+
+.second-para-div .dates-info {
+  color: black;
+  border: 3px solid white;
+  text-shadow: 2px 1px black;
 }
 
 .third-para-div .dates-info {
